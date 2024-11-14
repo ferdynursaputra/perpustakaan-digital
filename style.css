@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Light Mode (Default) */
+.theme-light {
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg-color: #ffffff;
+    --button-bg-color: #e0e0e0;
+    --button-hover-color: #cccccc;
+}
+
+/* Dark Mode */
+.theme-dark {
+    --primary-bg-color: #2b2b2b;
+    --secondary-bg-color: #3c3c3c;
+    --text-color: #e0e0e0;
+    --card-bg-color: #3c3c3c;
+    --button-bg-color: #444;
+    --button-hover-color: #555;
+    --form-label: #fff;
+}
+
+/* Applying color variables */
+body.theme-light, body.theme-dark {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+}
+
+.main-card {
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.btn-toggle {
+    background-color: var(--button-bg-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.btn-toggle:hover {
+    background-color: var(--button-hover-color);
+}
+
+.shadow-neumorphic {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Book Form Styles */
+#book-form {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#book-form input,
+#book-form select,
+#book-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#book-form input:focus,
+#book-form select:focus,
+#book-form button:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Book List Styles */
+#book-list {
+    margin-top: 30px;
+}
+
+.book-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.book-item h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.book-item p {
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .main-card {
+        margin-top: 20px;
+    }
+}
